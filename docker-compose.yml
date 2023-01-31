@@ -1,0 +1,36 @@
+version: '3.7'
+services:
+  node:
+    build:
+      context: .
+      dockerfile: node.dockerfile
+    container_name: babyone_node_server
+    volumes:
+      - ./app:/app
+    ports:
+      - 3000:3000
+    networks:
+      - babyone-network
+    depends_on:
+      - mongodb
+
+  mongodb:
+    container_name: babyone_mongo_db
+    image: mongo
+    volumes:
+      - ./data:/data/db
+    ports:
+      - 27018:27017
+    networks:
+      - babyone-network
+
+  redis:
+    container_name: babyone_redis
+    image: redis
+    ports:
+      - 6379:6379
+    networks:
+      - babyone-network
+
+networks:
+  babyone-network:

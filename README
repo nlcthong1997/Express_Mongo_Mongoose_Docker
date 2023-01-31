@@ -1,0 +1,10 @@
+Node.js: a JavaScript run-time scripting language
+Expressjs: serves as a Node.js framework
+Typegoose: serves as a wrapper around Mongoose to allow us to write Mongoose models with TypeScript classes.
+Mongoose: an ODM (Object Document Mapping) for accessing and mutating the database
+Bcryptjs: for hashing the passwords
+JsonWebToken: generating JWTs
+Redis: as caching storage for storing the user’s session
+MongoDB: as NoSQL database
+Zod: for validating user inputs
+cors: To allow Cross-Origin Resource Sharing between the backend and frontend
