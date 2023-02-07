@@ -1,16 +1,16 @@
 {
   "name": "app",
   "version": "1.0.0",
-  "description": "Express Mongo Redis Docker",
+  "description": "Express Mongo Redis Docker Typescript",
   "scripts": {
     "start": "npx tsc && cp $(pwd)/.env $(pwd)/dist/.env && cd $(pwd)/dist/api && node index.js",
     "build": "npx tsc && cp $(pwd)/.env $(pwd)/dist/.env",
-    "dev": "cd $(pwd)/api && nodemon -L -T index.ts",
-    "test": "echo \"Test scripts\" && exit 1"
+    "dev": "cd $(pwd)/api && nodemon -L index.ts"
   },
   "author": "Thong Nguyen",
   "license": "ISC",
   "devDependencies": {
+    "@types/cors": "^2.8.13",
     "nodemon": "^2.0.20"
   },
   "dependencies": {
@@ -22,11 +22,9 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "express-async-errors": "^3.1.1",
-    "express-async-handler": "^1.2.0",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^6.9.0",
     "mongoose-unique-validator": "^3.1.0",
-    "slugify": "^1.6.5",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.5",
     "winston": "^3.8.2"

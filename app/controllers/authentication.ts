@@ -7,8 +7,8 @@ class Authentication
     }
 
     login = (req: Request, res: Response) : void => {
-        a/2   
-        res.send('login')
+        // a/2   
+        res.send('login222')
     }
 }
 

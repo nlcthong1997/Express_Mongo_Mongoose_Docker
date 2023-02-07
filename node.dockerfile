@@ -1,15 +1,19 @@
-FROM node:16
+FROM node:16.19.0
 
 LABEL author="Thong Nguyen"
 
+WORKDIR /usr/local/cache
+
+COPY ./app/package*.json .
+
+RUN npm install --loglevel verbose
+
+WORKDIR /usr/local/bash
+
+COPY entrypoint.sh .
+
 WORKDIR /app
 
-COPY ./app/package.json .
-
-RUN npm install
-
-COPY ./app/ .
+COPY ./app .
 
 EXPOSE 3000
-
-CMD npm run dev
